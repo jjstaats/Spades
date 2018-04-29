@@ -4,6 +4,8 @@ from card import Card
 class BasePlayer(IPlayer):
 
     def __init__(self):
+        IPlayer.__init__(self)
+
         self.hand = []
         self.seen = set()
         self.full_deck = set()

@@ -10,7 +10,7 @@ class TensorPlayer(BasePlayer):
         super().__init__()
         self.predictor = predictor
         self.debug = False
-        self.trainer = False
+        self.trainer = None
         self.score = 0
         self.opponent_score = 0
 
@@ -87,7 +87,8 @@ class TensorPlayer(BasePlayer):
         if self.debug:
             self.trainer.queue_sample(states[selection])
         return selection
- 
+
+    @staticmethod
     def weighted_choice_sub(weights):
         offset = 9999999
         maxval = -9999999

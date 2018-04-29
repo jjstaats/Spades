@@ -1,6 +1,8 @@
 import copy
 
-class ParallelPlayer
+
+class ParallelPlayer:
+
     def __init__(self, prototype, concurrent_games):
         self.instances = []
         for i in range(0, concurrent_games):
